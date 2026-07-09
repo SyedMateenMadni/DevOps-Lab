@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3'   // Name must match a Maven installation configured in
-                         // Manage Jenkins > Tools
-    }
+    maven 'mvn3.9.6'
+}
 
     environment {
         IMAGE_NAME = "devops-cicd-lab"
