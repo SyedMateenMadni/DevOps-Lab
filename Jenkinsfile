@@ -11,15 +11,14 @@ pipeline {
         IMAGE_TAG  = "${env.BUILD_NUMBER}"
         CONTAINER_NAME = "devops-cicd-lab-container"
         DOCKERHUB_CREDS = credentials('dockerhub-creds') // configured in Jenkins credentials store
-        DOCKERHUB_REPO  = "yourdockerhubusername/devops-cicd-lab"
+        DOCKERHUB_REPO = "syedmateenmadni/devops-cicd-lab"
     }
-
-    stages {
+ stages {
 
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yourusername/devops-cicd-lab.git'
+                    url: 'https://github.com/SyedMateenMadni/DevOps-Lab.git'
             }
         }
 
