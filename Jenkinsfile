@@ -9,7 +9,7 @@ pipeline {
         IMAGE_NAME = "devops-cicd-lab"
         IMAGE_TAG  = "${env.BUILD_NUMBER}"
         CONTAINER_NAME = "devops-cicd-lab-container"
-        DOCKERHUB_CREDS = credentials('dockerhub-creds') // configured in Jenkins credentials store
+        DOCKERHUB_CREDS = credentials('dockerhub') // configured in Jenkins credentials store
         DOCKERHUB_REPO = "syedmateenmadni/devops-cicd-lab"
     }
  stages {
